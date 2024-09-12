@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #box {
+        width: 250px;
+        height: 250px;
+        border: 2px solid blue;
+        background-color: blueviolet;
+        animation: revelar 0.1s infinite;
+    }
+    @keyframes revelar {
+       from {
+         background-color: pink;
+       }
+       to {
+         background-color:blue;
+       }
+    }
+</style>
+</head>
+<body>
+    <div id="box"> </div>
+    <button id="bin">menino ou menina</button>
+<script>
+   var btn = document.getElementByid("box")
+   btn.addEventListener("click", () => {
+    //mudar a cor para azul ou rosa
+    var revelando = document.getElementByid("box").style.backgroundColor = "pink"
+    revelando.classList.add("menino")
+   })
+</script>
+</body>
+</html>
